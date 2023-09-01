@@ -1,0 +1,22 @@
+{
+  "user": [
+    {
+      "name": "Ismail Khan",
+      "email": "ismail@gmail.com",
+      "password": "abc@123",
+      "id": 1
+    },
+    {
+      "name": "Mehedi",
+      "email": "mehedi@gmail.com",
+      "password": "abc@123",
+      "id": 2
+    },
+    {
+      "name": "Sajid",
+      "email": "sanorita@gmail.com",
+      "password": "abc@123",
+      "id": 3
+    }
+  ]
+}
