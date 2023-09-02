@@ -17,6 +17,18 @@
       "email": "sanorita@gmail.com",
       "password": "abc@123",
       "id": 3
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 4
+    },
+    {
+      "name": "fthrt",
+      "email": "jgj",
+      "password": "ghty",
+      "id": 5
     }
   ]
 }
