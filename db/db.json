@@ -30,6 +30,41 @@
       "password": "ghty",
       "id": 5
     },
-
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 6
+    },
+    {
+      "name": "Khan",
+      "email": "sde@gmail.com",
+      "password": "12345679",
+      "id": 7
+    },
+    {
+      "name": "Ikmail",
+      "email": "ik@gamial.com",
+      "password": "123456",
+      "id": 8
+    },
+    {
+      "name": "eger",
+      "email": "sfege",
+      "password": "dsfewfer",
+      "id": 9
+    },
+    {
+      "name": "idrs",
+      "email": "fbfg",
+      "password": "dff",
+      "id": 10
+    },
+    {
+      "name": "ferg",
+      "email": "sdfds",
+      "password": "sdfds",
+      "id": 11
+    }
   ]
 }

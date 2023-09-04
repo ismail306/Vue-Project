@@ -4,7 +4,12 @@
 
 <script>
 export default {
-  name: "Home",
+  name: "HomePage",
+  mounted() {
+    if (!localStorage.getItem("user-info")) {
+      this.$router.push({ name: "signup" });
+    }
+  },
 };
 </script>
 
