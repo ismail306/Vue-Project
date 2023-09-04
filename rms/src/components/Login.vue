@@ -8,7 +8,7 @@
     <div class="authform">
       <input type="text" placeholder="Email" v-model="email" />
       <input type="text" placeholder="Password" v-model="password" />
-      <button @click="signUp" type="button">Log In</button>
+      <button @click="login" type="button">Log In</button>
     </div>
     <p>
       If You are not Registered ,please
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "LoginForm",
   data() {
@@ -25,6 +26,25 @@ export default {
       email: "",
       password: "",
     };
+  },
+  methods: {
+    async login() {
+      alert(this.email);
+      let result = await axios.get(
+        `http://localhost:3000/user?email=${this.email}&password=${this.password}`
+      );
+      if (result.status == 200 && result.data.length > 0) {
+        localStorage.setItem("user-info", JSON.stringify(result.data[0]));
+        this.$router.push({ name: "home" });
+      } else {
+        alert("login failed");
+      }
+    },
+  },
+  mounted() {
+    if (localStorage.getItem("user-info")) {
+      this.$router.push({ name: "home" });
+    }
   },
 };
 </script>
