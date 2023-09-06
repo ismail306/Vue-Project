@@ -1,15 +1,32 @@
 <template>
   <div class="navbar">
-    <a href="#">Home</a>
-    <a href="#">Add Restaurant </a>
-    <a href="#">Update Restaurant</a>
-    <a href="#">Logout</a>
+    <div>
+      <img
+        class="logo"
+        src="../assets/logo/logo.png"
+        alt="rms"
+        style="height: 40px"
+        width="40px"
+      />
+    </div>
+
+    <div>
+      <router-link to="/">Home</router-link>
+      <router-link to="/addrest">Add Restaurant </router-link>
+      <a @click="logout" href="#">Logout</a>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "HeaderSection",
+  methods: {
+    logout() {
+      localStorage.clear();
+      this.$router.push({ name: "login" });
+    },
+  },
 };
 </script>
 
@@ -21,6 +38,9 @@ export default {
   top: 0;
   width: 100%;
   margin-bottom: 100px;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
 }
 .navbar a {
   float: left;
@@ -29,6 +49,24 @@ export default {
   padding: 14px 16px;
   text-decoration: none;
   margin-right: 5px;
+}
+.navbar router-link {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.logout {
+  margin-left: auto;
 }
 
 .navbar a:hover {

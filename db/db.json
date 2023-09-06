@@ -3,7 +3,7 @@
     {
       "name": "Ismail Khan",
       "email": "ismail@gmail.com",
-      "password": "abc@123",
+      "password": "",
       "id": 1
     },
     {
@@ -65,6 +65,113 @@
       "email": "sdfds",
       "password": "sdfds",
       "id": 11
+    }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "KFC",
+      "address": "Dhanmondi",
+      "phone": "01900000000",
+      "email": "kfc@gmail.com"
+    },
+    {
+      "name": "Pizza Hut",
+      "address": "uttara",
+      "email": "ph@gmail.com",
+      "phone": "01900000500",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "BFC",
+      "address": "Dhanmondi",
+      "phone": "01900500000",
+      "email": "bfc@gmail.com"
+    },
+    {
+      "name": "KFC2",
+      "address": "Uttara",
+      "email": "kfc2@gmail.com",
+      "phone": "01929074663",
+      "id": 4
+    },
+    {
+      "name": "kfc3",
+      "address": "BD",
+      "email": "admgergrtin@emfngfail.com",
+      "phone": "01929074663",
+      "id": 5
+    },
+    {
+      "name": "Kahan",
+      "address": "BD",
+      "email": "afbgfe@email.com",
+      "phone": "01929074663",
+      "id": 6
+    },
+    {
+      "name": "Kahan",
+      "address": "BD",
+      "email": "zrgrt",
+      "phone": " 0192907462425",
+      "id": 7
+    },
+    {
+      "name": "Kahan",
+      "address": "BD",
+      "email": "sdfds",
+      "phone": "sdds",
+      "id": 8
+    },
+    {
+      "name": "Kahan",
+      "address": "BD",
+      "email": "ghfjtyj@email.com",
+      "phone": "01929074663",
+      "id": 9
+    },
+    {
+      "name": "Kahan",
+      "address": "BD",
+      "email": "fgftjty@email.com",
+      "phone": "01929074663",
+      "id": 10
+    },
+    {
+      "name": "Kahan",
+      "address": "BD",
+      "email": "last@email.com",
+      "phone": "01929074663",
+      "id": 11
+    },
+    {
+      "name": "Kahan",
+      "address": "BD",
+      "email": "gdfhtyjbnmyu@email.com",
+      "phone": "01929074663",
+      "id": 12
+    },
+    {
+      "name": "Kahan",
+      "address": "BD",
+      "email": "ikemon327857806@gmail.com",
+      "phone": "01929074663",
+      "id": 13
+    },
+    {
+      "name": "Kahan",
+      "address": "BD",
+      "email": "dfgftjty@email.com",
+      "phone": "01929074553",
+      "id": 14
+    },
+    {
+      "name": "Kahan",
+      "address": "Uttara",
+      "email": "DFDSin@gmail.com",
+      "phone": "01929074663",
+      "id": 15
     }
   ]
 }
