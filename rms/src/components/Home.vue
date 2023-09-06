@@ -1,23 +1,88 @@
 <template>
   <div>
     <HeaderSection />
-    <h1>WellCome To Home Page</h1>
+
+    <h1>Hello {{ name }}, WellCome To Restaurant List In Dhaka</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="item in restaurantList" :key="item.id">
+          <td>{{ item.id }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.address }}</td>
+          <td>{{ item.phone }}</td>
+          <td>{{ item.email }}</td>
+          <td>
+            <router-link class="action" :to="'/update/' + item.id"
+              >Edit</router-link
+            >
+            <router-link class="action" :to="'/delete/' + item.id"
+              >Delete</router-link
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 import HeaderSection from "./Header.vue";
+
 export default {
   name: "HomePage",
   components: {
     HeaderSection,
   },
-  mounted() {
-    if (!localStorage.getItem("user-info")) {
+  data() {
+    return {
+      name: JSON.parse(localStorage.getItem("user-info")).name,
+      restaurantList: [],
+    };
+  },
+  async mounted() {
+    let user = localStorage.getItem("user-info");
+    if (!user) {
       this.$router.push({ name: "signup" });
     }
+    let result = await axios.get("http://localhost:3000/restaurants");
+    this.restaurantList = result.data;
   },
 };
 </script>
 
-<style></style>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+.action {
+  text-decoration: none !important;
+  padding-right: 15px !important;
+}
+</style>

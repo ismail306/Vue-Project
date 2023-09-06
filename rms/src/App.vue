@@ -42,7 +42,8 @@ button {
   margin-right: auto;
   display: block;
   background-color: skyblue;
-  border: none;
+  border: 2px solid skyblue;
+  border-radius: 5px;
   color: white;
   font-size: 20px;
   cursor: pointer;
