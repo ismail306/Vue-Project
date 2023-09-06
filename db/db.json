@@ -69,13 +69,6 @@
   ],
   "restaurants": [
     {
-      "id": 1,
-      "name": "KFC",
-      "address": "Dhanmondi",
-      "phone": "01900000000",
-      "email": "kfc@gmail.com"
-    },
-    {
       "name": "Pizza Hut",
       "address": "uttara",
       "email": "ph@gmail.com",
@@ -113,13 +106,6 @@
     {
       "name": "Kahan",
       "address": "BD",
-      "email": "zrgrt",
-      "phone": " 0192907462425",
-      "id": 7
-    },
-    {
-      "name": "Kahan",
-      "address": "BD",
       "email": "sdfds",
       "phone": "sdds",
       "id": 8
@@ -133,7 +119,7 @@
     },
     {
       "name": "Kahan",
-      "address": "BD",
+      "address": "Uttara",
       "email": "fgftjty@email.com",
       "phone": "01929074663",
       "id": 10

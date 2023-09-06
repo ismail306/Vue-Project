@@ -25,9 +25,10 @@
             <router-link class="action" :to="'/update/' + item.id"
               >Edit</router-link
             >
-            <router-link class="action" :to="'/delete/' + item.id"
-              >Delete</router-link
-            >
+
+            <button @click="deleteRestaurant(item.id)" style="width: 50%">
+              Delete
+            </button>
           </td>
         </tr>
       </tbody>
@@ -44,11 +45,25 @@ export default {
   components: {
     HeaderSection,
   },
+
   data() {
     return {
       name: JSON.parse(localStorage.getItem("user-info")).name,
       restaurantList: [],
     };
+  },
+  methods: {
+    async deleteRestaurant(id) {
+      if (confirm("Are you sure?")) {
+        let result = await axios.delete(
+          `http://localhost:3000/restaurants/${id}`
+        );
+        if (result.status == 200) {
+          alert("Restaurant Deleted Successfully");
+          this.$router.push({ name: "home" });
+        }
+      }
+    },
   },
   async mounted() {
     let user = localStorage.getItem("user-info");
